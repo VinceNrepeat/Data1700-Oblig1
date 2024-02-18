@@ -10,6 +10,8 @@
 
 <h1>Bestilling av kinobilletter</h1>
 
+<!-- Form for å fylle info om billett-bestilling -->
+
 <form id="infoBillett" onsubmit="return sjekkFeil()">
 Velg film: <select name="velgFilm" id="velgFilm" required>
   <option value="" selected disabled hidden>Velg film her</option>
@@ -20,6 +22,8 @@ Velg film: <select name="velgFilm" id="velgFilm" required>
   </select> <br> <br>
 
 Antall <input type="text" size="1" id="antall" required> <span style="color: red" id="antallFeil"> </span> <br> <br>
+
+  <!-- Tabell slik at alle input felt står på lik linje -->
 
 <table>
   <tr><td>Fornavn</td>
