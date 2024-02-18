@@ -1,4 +1,7 @@
+
 const billettListe = [];
+
+<!-- Function for å fylle ut billettliste arrayet -->
 function kjøpBillett(film, antall, fornavn, etternavn, telefonnr, epost) {
   const nybestilling = {
     film : film,
@@ -11,6 +14,8 @@ function kjøpBillett(film, antall, fornavn, etternavn, telefonnr, epost) {
   billettListe.push(nybestilling)
   showList()
 }
+
+<!-- Function for å vise lista, aktiveres når liste oppdateres eller skal slettes -->
 
 function showList() {
   let ut = "<table><tr>" +
@@ -27,6 +32,8 @@ function showList() {
   document.getElementById("billettListe").innerHTML=ut;
 
 }
+
+<!-- Function for å sjekke eventuelle feil som "required" attributtene ikke plukker opp -->
 
 function sjekkFeil(){
   var film = document.getElementById("velgFilm").value;
@@ -57,6 +64,8 @@ function sjekkFeil(){
 
   return false;
 }
+
+<!-- Function for å slette alle registrerte billetter  -->
 
 function deleteBillett(){
   for(let i in billettListe){
