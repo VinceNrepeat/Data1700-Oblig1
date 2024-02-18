@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="Oblig1.js"></script>
+</head>
+
+<body>
+
+<h1>Bestilling av kinobilletter</h1>
+
+<form id="infoBillett" onsubmit="return sjekkFeil()">
+Velg film: <select name="velgFilm" id="velgFilm" required>
+  <option value="" selected disabled hidden>Velg film her</option>
+  <option value ="Mice Wars">Mice Wars</option>
+  <option value ="Movie: The Movie">Movie: The Movie</option>
+  <option value ="Javascript 2">Javascript 2</option>
+  <option value ="Shaolin Soccer">Shaolin Soccer</option>
+  </select> <br> <br>
+
+Antall <input type="text" size="1" id="antall" required> <span style="color: red" id="antallFeil"> </span> <br> <br>
+
+<table>
+  <tr><td>Fornavn</td>
+    <td><input type="text" id="fornavn" required></td>
+  <tr><td>Etternavn</td>
+     <td><input type="text" id="etternavn" required></td>
+  <tr><td>Telefonnr</td>
+      <td><input type="text" id="telefonnr" pattern="[0-9]{8}" required></td>
+  <tr><td>Epost</td>
+      <td><input type="text" id="epost" required> <span style="color: red" id="epostFeil"></span>
+</table>
+  <button type="submit">Kjøp Billett</button>
+</form>
+
+<h2>Alle billetter</h2>
+
+<div id="billettListe"></div>
+
+<button onclick="deleteBillett()">Slett alle billettene</button> <br> <br>
+
+</body>
+</html>
