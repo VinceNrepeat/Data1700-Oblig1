@@ -1,3 +1,4 @@
+
 const billettListe = [];
 
 <!-- Function for å fylle ut billettliste arrayet -->
